@@ -13,11 +13,8 @@ function wrapImageWithFancyBox() {
         if (image.parent("div") && image.parent("div").hasClass("avatar")) {
             return;
         }
-        let tmpImgHtml = image.prop("outerHTML");
-        let html = `<a data-fancybox="images" href=${image.attr("src")}>${tmpImgHtml}</a>`;
-        let contextImageParent = image.parent("p");
-        image.remove();
-        contextImageParent.append(html);
+        let html = `<a data-fancybox="images" href=${image.attr("src")}></a>`;
+        image.wrap(html);
     });
 
     $().fancybox({
