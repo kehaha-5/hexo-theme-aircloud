@@ -43,14 +43,9 @@
 <%- js('js/index.js') %>
 <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
 <script src="/js/jquery.min.js"></script>
-<script src="/js/highlight.min.js"></script>
+<script src="/js/prism.js"></script>
 <%if( (page.comments) && config.comment && config.comment.type === 'gitment'){%>
 <%- js('js/gitment.js') %>
-<script>
-    $(function () {
-        hljs.initHighlightingOnLoad()
-    }());
-</script>
 <script>
     var gitment = new Gitment({
         id: '<%- page.title %>',
